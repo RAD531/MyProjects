@@ -1,0 +1,9 @@
+C:\Users\ryand\source\repos\CoffeeGame\CoffeeGame\bin\Debug\CoffeeGame.exe.config
+C:\Users\ryand\source\repos\CoffeeGame\CoffeeGame\bin\Debug\CoffeeGame.exe
+C:\Users\ryand\source\repos\CoffeeGame\CoffeeGame\bin\Debug\CoffeeGame.pdb
+C:\Users\ryand\source\repos\CoffeeGame\CoffeeGame\obj\Debug\CoffeeGame.csprojAssemblyReference.cache
+C:\Users\ryand\source\repos\CoffeeGame\CoffeeGame\obj\Debug\CoffeeGame.Properties.Resources.resources
+C:\Users\ryand\source\repos\CoffeeGame\CoffeeGame\obj\Debug\CoffeeGame.csproj.GenerateResource.cache
+C:\Users\ryand\source\repos\CoffeeGame\CoffeeGame\obj\Debug\CoffeeGame.exe
+C:\Users\ryand\source\repos\CoffeeGame\CoffeeGame\obj\Debug\CoffeeGame.pdb
+C:\Users\ryand\source\repos\CoffeeGame\CoffeeGame\obj\Debug\CoffeeGame.Form1.resources

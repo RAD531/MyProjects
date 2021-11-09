@@ -1,0 +1,6 @@
+C:\Users\ryand\source\repos\Big0Tests\Big0Tests\bin\Debug\Big0Tests.exe.config
+C:\Users\ryand\source\repos\Big0Tests\Big0Tests\bin\Debug\Big0Tests.exe
+C:\Users\ryand\source\repos\Big0Tests\Big0Tests\bin\Debug\Big0Tests.pdb
+C:\Users\ryand\source\repos\Big0Tests\Big0Tests\obj\Debug\Big0Tests.csprojAssemblyReference.cache
+C:\Users\ryand\source\repos\Big0Tests\Big0Tests\obj\Debug\Big0Tests.exe
+C:\Users\ryand\source\repos\Big0Tests\Big0Tests\obj\Debug\Big0Tests.pdb

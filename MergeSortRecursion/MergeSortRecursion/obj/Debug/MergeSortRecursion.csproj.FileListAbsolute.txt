@@ -1,0 +1,6 @@
+C:\Users\ryand\source\repos\MergeSortRecursion\MergeSortRecursion\bin\Debug\MergeSortRecursion.exe.config
+C:\Users\ryand\source\repos\MergeSortRecursion\MergeSortRecursion\bin\Debug\MergeSortRecursion.exe
+C:\Users\ryand\source\repos\MergeSortRecursion\MergeSortRecursion\bin\Debug\MergeSortRecursion.pdb
+C:\Users\ryand\source\repos\MergeSortRecursion\MergeSortRecursion\obj\Debug\MergeSortRecursion.csprojAssemblyReference.cache
+C:\Users\ryand\source\repos\MergeSortRecursion\MergeSortRecursion\obj\Debug\MergeSortRecursion.exe
+C:\Users\ryand\source\repos\MergeSortRecursion\MergeSortRecursion\obj\Debug\MergeSortRecursion.pdb

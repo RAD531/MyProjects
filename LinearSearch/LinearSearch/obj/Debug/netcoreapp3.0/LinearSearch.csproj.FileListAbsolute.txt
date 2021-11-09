@@ -1,0 +1,11 @@
+C:\Users\ryand\source\repos\LinearSearch\LinearSearch\bin\Debug\netcoreapp3.0\LinearSearch.exe
+C:\Users\ryand\source\repos\LinearSearch\LinearSearch\bin\Debug\netcoreapp3.0\LinearSearch.deps.json
+C:\Users\ryand\source\repos\LinearSearch\LinearSearch\bin\Debug\netcoreapp3.0\LinearSearch.runtimeconfig.json
+C:\Users\ryand\source\repos\LinearSearch\LinearSearch\bin\Debug\netcoreapp3.0\LinearSearch.runtimeconfig.dev.json
+C:\Users\ryand\source\repos\LinearSearch\LinearSearch\bin\Debug\netcoreapp3.0\LinearSearch.dll
+C:\Users\ryand\source\repos\LinearSearch\LinearSearch\bin\Debug\netcoreapp3.0\LinearSearch.pdb
+C:\Users\ryand\source\repos\LinearSearch\LinearSearch\obj\Debug\netcoreapp3.0\LinearSearch.csprojAssemblyReference.cache
+C:\Users\ryand\source\repos\LinearSearch\LinearSearch\obj\Debug\netcoreapp3.0\LinearSearch.AssemblyInfoInputs.cache
+C:\Users\ryand\source\repos\LinearSearch\LinearSearch\obj\Debug\netcoreapp3.0\LinearSearch.AssemblyInfo.cs
+C:\Users\ryand\source\repos\LinearSearch\LinearSearch\obj\Debug\netcoreapp3.0\LinearSearch.dll
+C:\Users\ryand\source\repos\LinearSearch\LinearSearch\obj\Debug\netcoreapp3.0\LinearSearch.pdb
