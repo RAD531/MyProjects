@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+
+<HTML>
+
+<HEAD>
+
+<!-- Used to adjust content to smaller screen sizes -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--used to avoid strange symbols/lettering on page, this meta tag covers a wide range of unicode lettering-->
+<meta charset="UTF-8">
+
+<TITLE>InTheZone</TITLE>
+
+<!-- link to stylesheet -->
+<Link href="CSS/InTheZoneStylesheet.css" rel="stylesheet" type="text/css">
+
+<!--Link to JavaScript File-->
+<script type="text/javascript" src="JavaScript/InTheZone.js"></script>
+
+<!--Favicon Image -->
+<link rel="icon" href="Images/InTheZoneLogoFavicon.png" type="image/ico" />
+
+        
+<!-- Internal JavaScript Syntax -->
+    <script>
+
+            //status when user leaves page
+
+            window.onblur=function()
+            {
+                document.title="We miss you";
+            }
+
+            //status when user re-visits page/normal state
+
+            window.onfocus=function()
+            {
+                document.title="InTheZone";
+            }
+
+    </script>
+
+
+</HEAD>
+
+<BODY>
+
+    <!--div wrapper-->
+    <div id = "pageWrapper">
+        <!--Using header and footer tags instead of div for browser support-->
+        <header id = "header">
+            <!--start of navigation, navigation wrapper-->
+            <div class="navigation-bar">
+
+                <div id="navigation-container">
+                        
+                    <!--logo-->    
+                    <a href = "index.html">
+                        <img src="Images/InTheZoneLogo.png" alt = "InTheZoneLogo">
+                    </a>
+                        <!--navigation selection-->
+                        <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About InTheZone</a></li>
+                                <li><a href="products.html">Products</a></li>
+                                <li><a href="findUs.html">Find Us</a></li>
+                                <li><a href="getinTouch.html">Get in Touch</a></li>
+                        </ul>
+
+                        <form action="http://localhost/InTheZone/login.php">
+                        <input type="submit" value ="Login">
+                        </form>
+
+                </div>
+
+
+                <!--progress bar underneath the navigation-->
+                <div class="progress-container">
+                    <div class="progress-bar" id="myBar"></div>
+                </div> 
+
+        </header>
+
+        <!------------------------------------------sie arrow left---------------------------------------------------------------->
+        
+        <!--left sided navigation-->
+        <div id="mySidenav" class="sidenav">
+                <!--JS to open/close left sided nav-->
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <h1>Coming Soon!</h1>
+                <ol>CTR Nitro Fueled</ol>
+                <ol>Releases on 21/06/2019</ol>
+                <img src="Images/CTRNF.jpg" alt="Crash Team Racing Nitro Fueled">
+                <br></br>
+                <ol>Resident Evil 2 Remake</ol>
+                <ol>Releases on 25/01/2019</ol>
+                <img src="Images/RE2RM.png" alt="Resident Evil 2 Remake">
+                
+        </div>
+
+        <!----------------left sided nav open button as hexidecimal symbol--------------->
+        <div id = "arrow"><span style="font-size:75px;cursor:pointer" onclick="openNav()">&#8811; </span></div>
+
+        <script>
+                //left sided nav open and close JS functions, setting a width in pixels to expand/minimise content
+                function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                }
+
+                //nav set to width 0, width decreased to show no content
+                function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                }
+        </script>
+
+        <!--------------------------side arrow left end----------------------------->
+
+        <!---------------------------side nav right--------------------------------->
+
+            <div id="mySidenavright" class="sidenavright">
+                <!--right side nav open/close-->
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNavright()">&times;</a>
+                <h1>Current Game Rankings</h1>
+                <!--navigation content with links-->
+                <table>
+                    <tr>
+                        <td><img src="Images/ArrowUP.png" alt="Arrow Up"></td>
+                        <td><a href="#">1# Red Dead Redemption 2 (PS4)</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Images/ArrowDOWN.png" alt="Arrow Down"></td>
+                        <td><a href="fifa19ps4.html">2# FIFA 19 (PS4)</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Images/ArrowSIDE.png" alt="Arrow Side"></td>
+                        <td><a href="#">3# Super Smash Bros. Ultimate (Nintendo Switch)</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Images/ArrowUP.png" alt="Arrow Up"></td>
+                        <td><a href="#">4# Assassin's Creed Odyssey (PS4)</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Images/ArrowSIDE.png" alt="Arrow Side"></td>
+                        <td><a href="#">5# WWE 2K19 (PS4)</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Images/ArrowUP.png" alt="Arrow Up"></td>
+                        <td><a href="#">6# Forza Horizon 4 (XBOX ONE)</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Images/ArrowUP.png" alt="Arrow Up"></td>
+                        <td><a href="#">7# Fortnite (PC)</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Images/ArrowDOWN.png" alt="Arrow Down"></td>
+                        <td><a href="#">8# Overwatch (PC)</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Images/ArrowDOWN.png" alt="Arrow Down"></td>
+                        <td><a href="#">9# Fallout 76 (PS4)</a></td>
+                    </tr>
+
+                    </table>
+
+            </div>
+
+            <!--right sided nav open button as hexidecimal symbol-->
+            <div id = "arrowright"><span style="font-size:75px;cursor:pointer" onclick="openNavright()">&#8810; </span></div>
+
+            <script>
+                //right sided nav open and close JS functions, setting a width in pixels to expand/minimise content
+                function openNavright() {
+                document.getElementById("mySidenavright").style.width = "250px";
+                }
+
+                //nav set to width 0, width decreased to show no content
+                function closeNavright() {
+                document.getElementById("mySidenavright").style.width = "0";
+                }
+            </script>
+
+<!--------------------------------side nav right end----------------------------------------------->        
+        <div id = "mainContent">
+
+                <!--InTheZone trailer video on a loop, no sound and no controls-->
+                <div id = "video">
+                    <video autoplay="" muted="" loop="" 
+                        width="100%" height="100%">
+                        <source src="Images/InTheZoneVideo2.mp4" type="video/mp4">
+                        <!--error message-->
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <div id = "Introduction">
+                    
+                    <h1>Welcome to InTheZone</h1>
+                    <p>You must be here becuase you are a game lover, which is great becuase - so are we!</p>
+                    <p>Feel free to browse across the website and be sure to check out our range of games.</p>
+                    <p>We hope you enjouy your browse and look forward to seeing you in store.</p>
+                    
+                </div>
+        </div>
+
+        <div id = "mainContent2">
+
+        <div id = "backgroundvideo">
+                    <!--background video on a loop, with no sound and no controls-->
+                    <video autoplay="" muted="" loop="">
+                        <source src="Images/SciFiBackground1.mp4" type="video/mp4">
+                        <!--error message-->
+                        Your browser does not support the video tag.
+                    </video>
+        </div>
+
+
+        <!--carousel pictures div container-->
+        <div class="carousel">
+                <div class="carousel-inner">
+                    <!--radio buttons below first image and aria hidden for people with screen readers -->
+                    <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+                    <!--class to set images-->
+                    <div class="carousel-item">
+                        <img src="Images/SliderImage1.jpg">
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+                    <div class="carousel-item">
+                        <img src="Images/SliderImage2.jpg">
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+                    <div class="carousel-item">
+                        <img src="Images/SliderImage3.jpg">
+                    </div>
+                    <!--right sided arrow-->
+                    <label for="carousel-3" class="carousel-control prev control-1">‹</label>
+                    <!--left sided arrow-->
+                    <label for="carousel-2" class="carousel-control next control-1">›</label>
+                    <!--right sided arrow position-->
+                    <label for="carousel-1" class="carousel-control prev control-2">‹</label>
+                    <!--left sided arrow position-->
+                    <label for="carousel-3" class="carousel-control next control-2">›</label>
+                    <label for="carousel-2" class="carousel-control prev control-3">‹</label>
+                    <label for="carousel-1" class="carousel-control next control-3">›</label>
+                    <!--dot indicators wrapper-->
+                    <ol class="carousel-indicators">
+                        <li>
+                             <!--dot indicator 1-->
+                            <label for="carousel-1" class="carousel-bullet">•</label>
+                        </li>
+                        <li>
+                             <!--dot indicator 2-->
+                            <label for="carousel-2" class="carousel-bullet">•</label>
+                        </li>
+                        <li>
+                             <!--dot indicator 3-->
+                            <label for="carousel-3" class="carousel-bullet">•</label>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+
+                <div id = "newsandevents">
+                        <h1>News and Events</h1>
+
+                        <div id = "newsandeventsbox1">
+                                <h1>The Game Awards 2018</h1>
+                                <!-- the below function creates a button that is clickable, this button is used in the JavaScript, once clicked, content will show below the button and the value/text of the button will change  -->
+                                <input onclick="showContent()" type="button" id = "button1" value ="Show More">
+                        <div id = "newsandeventscontent1">
+                                <p>God of War was voted game of the year at the 2018 game awards hosted in Los Angeles on the 6th December. Other awards were dished out from best ongoing game to best independent game, read the full story here: <a href = "https://www.polygon.com/game-awards-tga/2018/12/6/18130000/the-game-awards-winners-2018" target="_blank">Game Awards 2018</a></p>
+                                <img src = "Images/GodofWar.jpg" alt = "God of War">
+                        </div>  
+            
+                        </div>
+
+                <div id = "newsandeventsbox2">
+                        <h1>The Last of Us Part II</h1>
+                        <!-- the below function creates a button that is clickable, this button is used in the JavaScript, once clicked, content will show below the button and the value/text of the button will change  -->
+                        <input onclick="showContent2()" type="button" id ="button2" value = "Show More">
+                        <div id="newsandeventscontent2">
+                        <p>The Last of Us Part II is currently in development with no release date confimed as of yet. However Naughty Dog have released the latest - and most impressive - trailer for The Last of Us Part II during the PlayStation E3 2018 press conference on the 11/06/2018, <a href = "https://www.youtube.com/watch?v=UzdNECcio54" target="_blank">Click here </a> for the teaser trailer</p>
+                        
+                        <img src = "Images/TheLastofUsPart2.jpeg" alt = "The Last of Us Part 2">  
+                        </div>            
+                </div>
+
+
+                <div id = "newsandeventsbox3">
+                        <h1>Fallout 76 Disappoints :-(</h1>
+                        <!-- the below function creates a button that is clickable, this button is used in the JavaScript, once clicked, content will show below the button and the value/text of the button will change  -->
+                        <input onclick="showContent3()" type="button" id ="button3" value= "Show More">
+                        <div id="newsandeventscontent3">
+                        <p>The much anticipated game of 2018 has sadly disappointed. Fallout 76 follows in the footsteps of the Elder Scrolls Online, in which much hope laid upon Bethesda franchise that failed to deliver.<a href = "https://uk.ign.com/articles/2018/11/22/fallout-76-review" target="_blank"> Read more here </a> </p>
+
+                        <img src = "Images/fallout76Review.jpg" alt = "Fallout 76"> 
+                    
+                        </div>    
+                        </div>
+                </div>
+
+                <div id ="socialMedia">
+
+                        <h1>Social Media</h1>
+
+                
+
+                        <div id = "facebook">
+                                <div id = "facebookText">Like us on Facebook</div>
+                                <div id ="facebookLogo">
+                                <!-- link to facebook home page -->
+                                <a href = "https://en-gb.facebook.com/">
+                                <img src= "Images/facebook_square.jpg" alt = "Facebook Logo"></div>
+                                </a>
+                        </div>
+                        
+                        <div id = "twitter">
+                                <!-- link to twitter home page -->
+                                <div id = "twitterText">Follow us on Twitter</div>
+                                <div id ="twitterLogo">
+                                <a href = "https://twitter.com/login?lang=en-gb">
+                                <img src= "Images/twitter_logo_square.jpg" alt = "Twitter Logo"></div>
+                                </a>
+                        </div>
+                            
+                    <div id = "instagram">
+                        <div id = "instagramText">Find us on Instagram</div>
+                        <div id ="instagramLogo">
+                            <!-- link to instagram home page -->
+                            <a href = "https://www.instagram.com/?hl=en">
+                            <img src= "Images/instagram-logo-square-resized.png" alt = "Instagram Logo"></div>
+                            </a>
+                            </div>
+                </div>
+
+
+            </div>
+
+            </div>
+
+             <footer id="footer">
+
+                <div id="footertitle">
+
+                    <h1>Other Information</h1>
+
+                </div>
+
+                 <!-----------------calendar start------------------------>
+
+                <div id ="footer1">
+
+                  
+                    <form>
+                        <select onChange="updatecalendar(this.options)">
+                        <script type="text/javascript">
+                        document.write('<option value="'+(curmonth-1)+'" selected="yes">Current Month</option>')
+                            for (i=0; i<12; i++) //display option for 12 months of the year
+                            document.write('<option value="'+i+'">'+themonths[i]+' '+curyear+'</option>')
+                        </script>
+                        </select>
+                        <br></br>
+                        <div id="calendarspace">
+                        <script>
+                        //write out current month's calendar to start
+                        document.write(buildCal(curmonth, curyear, "main", "month", "daysofweek", "days", 0))
+                        </script>
+                        </div>
+
+                    </form>
+
+                </div>
+
+                <!-------------------calendar end---------------------------->
+
+                <div id ="footer2">
+
+                <p id ="demo"></p>
+                    
+                <script>
+                
+                //get the day of the weeek and display it along with the opening times
+                document.getElementById("demo").innerHTML= "Today is " + day;
+    
+                </script>
+                    
+                </div>
+
+                <div id = "footer3">
+
+                <!--clickable image to automatically, scroll up to top of page-->
+                <a href="#" onclick="scrollToTop();return false">
+                <img src="Images/ArrowUP.png" alt="Arrow Down">
+                </a>
+                <p>Scroll Back Up The Page</p>
+               
+        
+                </div>
+
+                <div id = "footer4">
+
+                    <p>© Copyright 2018 InTheZone. All rights reserved.</p>
+                  
+                </div>
+                    
+
+
+            </footer>
+
+    </div>
+
+
+</BODY>
+
+
+</HTML>

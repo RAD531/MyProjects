@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+<HTML>
+
+<HEAD>
+
+<!-- Used to adjust content to smaller screen sizes -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--used to avoid strange symbols/lettering on page, this meta tag covers a wide range of unicode lettering-->
+<meta charset="UTF-8">
+
+<TITLE>InTheZone</TITLE>
+
+<!-- link to stylesheet -->
+<Link href="CSS/InTheZoneStylesheet.css" rel="stylesheet" type="text/css">
+
+<!--Link to JavaScript File-->
+<script type="text/javascript" src="JavaScript/InTheZone.js"></script>
+
+<!--Favicon Image -->
+<link rel="icon" href="Images/InTheZoneLogoFavicon.png" type="image/ico" />
+
+        
+<!-- JavaScript Syntax -->
+            
+
+            <script>
+
+
+            //status when user leaves page
+
+            window.onblur=function()
+            {
+                document.title="We miss you";
+            }
+
+            //status when user re-visits page/normal state
+
+            window.onfocus=function()
+            {
+                document.title="FIFA 19 PS4";
+            }
+            </script>
+
+</HEAD>
+
+<BODY>
+
+    <!--div wrapper-->
+    <div id = "pageWrapper">
+        <!--Using header and footer tags instead of div for browser support-->
+        <header id = "header">
+            <!--start of navigation, navigation wrapper-->
+            <div class="navigation-bar">
+
+                <div id="navigation-container">
+                        
+                    <!--logo-->    
+                    <a href = "index.html">
+                        <img src="Images/InTheZoneLogo.png" alt = "InTheZoneLogo">
+                    </a>
+                        <!--navigation selection-->
+                        <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About InTheZone</a></li>
+                                <li><a href="products.html">Products</a></li>
+                                <li><a href="findUs.html">Find Us</a></li>
+                                <li><a href="getinTouch.html">Get in Touch</a></li>
+                        </ul>
+                </div>
+
+
+                <!--progress bar underneath the navigation-->
+                <div class="progress-container">
+                    <div class="progress-bar" id="myBar"></div>
+                </div> 
+
+        </header>
+
+        <!------------------------------------------sie arrow left---------------------------------------------------------------->
+        
+        <!--left sided navigation-->
+        <div id="mySidenav" class="sidenav">
+                <!--JS to open/close left sided nav-->
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <h1>Coming Soon!</h1>
+                <ol>CTR Nitro Fueled</ol>
+                <ol>Releases on 21/06/2019</ol>
+                <img src="Images/CTRNF.jpg" alt="Crash Team Racing Nitro Fueled">
+                <br></br>
+                <ol>Resident Evil 2 Remake</ol>
+                <ol>Releases on 25/01/2019</ol>
+                <img src="Images/RE2RM.png" alt="Resident Evil 2 Remake">
+                
+        </div>
+
+        <!--left sided nav open button as hexidecimal symbol-->
+        <div id = "arrow"><span style="font-size:75px;cursor:pointer" onclick="openNav()">&#8811; </span></div>
+
+        <script>
+                //left sided nav open and close JS functions, setting a width in pixels to expand/minimise content
+                function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                }
+
+                //nav set to width 0, width decreased to show no content
+                function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                }
+        </script>
+
+        <!--------------------------------------------side arrow left end-------------------------------------------------------->
+
+        <!--------------------------------------------side nav right------------------------------------------------------------->
+
+            <div id="mySidenavright" class="sidenavright">
+                <!--right side nav open/close-->
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNavright()">&times;</a>
+                <h1>Current Game Rankings</h1>
+                <!--navigation content with links-->
+                <table>
+                    <tr>
+                        <td><img src="Images/ArrowUP.png" alt="Arrow Up"></td>
+                        <td><a href="#">1# Red Dead Redemption 2 (PS4)</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Images/ArrowDOWN.png" alt="Arrow Down"></td>
+                        <td><a href="fifa19ps4.html">2# FIFA 19 (PS4)</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Images/ArrowSIDE.png" alt="Arrow Side"></td>
+                        <td><a href="#">3# Super Smash Bros. Ultimate (Nintendo Switch)</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Images/ArrowUP.png" alt="Arrow Up"></td>
+                        <td><a href="#">4# Assassin's Creed Odyssey (PS4)</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Images/ArrowSIDE.png" alt="Arrow Side"></td>
+                        <td><a href="#">5# WWE 2K19 (PS4)</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Images/ArrowUP.png" alt="Arrow Up"></td>
+                        <td><a href="#">6# Forza Horizon 4 (XBOX ONE)</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Images/ArrowUP.png" alt="Arrow Up"></td>
+                        <td><a href="#">7# Fortnite (PC)</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Images/ArrowDOWN.png" alt="Arrow Down"></td>
+                        <td><a href="#">8# Overwatch (PC)</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Images/ArrowDOWN.png" alt="Arrow Down"></td>
+                        <td><a href="#">9# Fallout 76 (PS4)</a></td>
+                    </tr>
+
+                    </table>
+
+            </div>
+
+            <!--right sided nav open button as hexidecimal symbol-->
+            <div id = "arrowright"><span style="font-size:75px;cursor:pointer" onclick="openNavright()">&#8810; </span></div>
+
+            <script>
+                //right sided nav open and close JS functions, setting a width in pixels to expand/minimise content
+                function openNavright() {
+                document.getElementById("mySidenavright").style.width = "250px";
+                }
+
+                //nav set to width 0, width decreased to show no content
+                function closeNavright() {
+                document.getElementById("mySidenavright").style.width = "0";
+                }
+            </script>
+
+<!------------------------------------------------side nav right end------------------------------------------------------------------>        
+
+
+        <div id = "gameWrapperSM">
+
+            <div id = "gameWrapper">
+
+                <div id = "gameBox">
+
+                <div id = "gameTitle">
+                <p>FIFA 19 (PS4)</p>
+                </div>
+
+                <div id = "gamePicture">
+                <img src= "Images/FIFA19PS4enlarged.jpg" alt = "Facebook Logo">
+                </div>
+
+                <div id = "gameContent">
+                        <!--drop down list-->
+                        <p>Platform:</p>
+                        <select>
+                        <option value="PS4">PS4</option>
+                        <option value="Xbox One">Xbox One</option>
+                        <option value="PC">PC</option>
+                        <option value="Nintendo Switch">Nintendo Switch</option>
+                        </select>
+
+                        <p id="gameContentBold">Control every moment on the pitch with new gameplay features.</p>
+                        <p>EA Sports FIFA 19 is here to offer incredible scenes on and off the pitch, with dynamic game play and precise control of every movement. Play the finale of the incredible story of Alex Hunter in The Journey: Champions, a brand-new mode in FIFA Ultimate Team, enjoy even more leagues in Career and much more. <p>
+                        <p>It’s time for the elite players to rise and enjoy the pinnacle of football across the variety of new modes. Are you ready to aim for goal?
+                        <p id="gameContentBold">Grab your controller and take control of the pitch, buy today.</p>
+                        <p id = "idNum">ID: 33943</p>
+                        <img src="Images/rating3.jpg" alt = "Rated at 3">
+
+                </div>
+
+                <div class="gamesTab">
+
+                <!--content appears on the onclick event-->
+                <div id = "gameSpecsButton">
+                <p class="tablinks" onclick="openFindUs(event, 'gameSpecs')">Specs</p>
+                </div>
+
+                <!--content appears on the onclick event-->
+                <div id = "gameReviewsButton">
+                <p class="tablinks" onclick="openFindUs(event, 'gameReviews')">Reviews</p>
+                </div>
+
+                <!--content appears on the onclick event-->
+                <div id = "gameVideoButton">
+                <p class="tablinks" onclick="openFindUs(event, 'gameVideo')">Video</p>
+                </div>
+
+                <!--gameSpecs id appears only when corrosponding onclick event is triggered-->
+                <div id="gameSpecs" class="tabcontent">
+                <h3>Release Date: 28/09/2018</h3>
+                <p>Do you have what it takes to take your team to the top of the league? Lead your teams to victory on PS4.</p>
+                <p>EA Sports have returned, offering incredible and unrivalled ways to play across a variety of game modes and new leagues. Enjoy the pinnacle of football with the new and improved features!</p>
+                <h3>UEFA CHAMPIONS LEAGUE/EUROPA LEAGUE/SUPER CUP</h3>
+                <p>The UEFA Champions League, Europa League, and Super Cup have and are offering up a brand-new commentary team of Derek Rae and Lee Dixon. You can now experience the world’s greatest football leagues in all elements.</p>
+                <p>Introducing a brand-new mode, Champions League Mode, you can be in the centre of the drama and excitement of the official UEFA Champions League tournament all the way from group stages to the final match.</p>
+                <p>To add even more realism into the gameplay, there are official broadcast elements included throughout game play. These include match balls, kit badges and the iconic trophies from the UEFA Champions League, Europa League, and Super Cup.</p>
+                <h3>THE JOURNEY: CHAMPIONS</h3>
+                <p>The Journey: Champions will follow three football heroes, each with their own fascinating stories. Follow the respective and challenging journeys of Alex Hunter, Danny Williams, and Kim Hunter as they reach some of the most significant moments of their careers. Each of their stories intertwine and enable you to switch between the three characters at any time.</p>
+                <p>You’ll cross paths with some of the of the world’s most prestigious footballers, including Neymar Jr., Alex Morgan, Paulo Dybala, Kevin De Bruyne, and many more.</p>
+                <p>After Kim had her big break into the US Women’s National Team in The Journey: Hunter Returns, she steps into the lead role in this trilogy’s final chapter. Play as Kim as she flourishes in her personal journey to represent the US at the Women’s World Cup.</p>
+                <h3>EVEN MORE NEW MODES….</h3>
+                <p>But that’s not all that’s coming to FIFA 19 on PS4. There are even more new modes and features such as new kick-off experience, career mode, pro-cubs and skill games.</p>
+
+                </div>
+
+                <!--gameReviews id appears only when corrosponding onclick event is triggered-->
+                <div id="gameReviews" class="tabcontent">
+                <br></br>
+                <table>
+                <th>User Id</th>
+                <th>Rating</th>
+                <th>Pros</th>
+                <th>Cons</th>
+                <th>Review</th>
+                    <tr>
+                        <td>RAD1993</td>
+                        <td>3/5</td>
+                        <td><ul>
+                            <li>good gameplay</li>
+                            <li>awesome career mode</li>
+                            <li>Ultimate Team is always a pro</li>
+                        </ul></td>
+                        <td><ul>
+                            <li>bad commentary</li>
+                            <li>not much change in the gameplay from FIFA 18</li>
+                            <li>Be a Pro mode needs a revamp</li>
+                        </ul></td>
+                        <td>Overall a good game, but I expected mnore change from the last installment, considering how much it is!</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>bob25</td>
+                        <td>5/5</td>
+                        <td><ul>
+                            <li>graphics</li>
+                            <li>choice of teams</li>
+                            <li>A.I</li>
+                        </ul></td>
+                        <td><ul>
+                            <li>none</li>
+                        </ul></td>
+                        <td>great game, would defo buy as a bday or christmas presy this year!</td>
+                    </tr>
+
+                    <tr>
+                        <td>knight675</td>
+                        <td>1/5</td>
+                        <td><ul>
+                            <li>improved gameplay</li>
+                        </ul></td>
+                        <td><ul>
+                            <li>terrible commentary</li>
+                            <li>a.i sucks</li>
+                            <li>no change in the career mode from 2 years ago!</li>
+                        </ul></td>
+                        <td>please dont waste your money on this truly awful game, invest in pro-evo instead, which has better a.i and gameplay</td>
+                    </tr>
+
+                    <tr>
+                        <td>sarah123</td>
+                        <td>4/5</td>
+                        <td><ul>
+                            <li>Champions League is a good addition</li>
+                            <li>FUT is soooo addictive</li>
+                            <li>players without the ball seem to do a lot more thinking</li>
+                        </ul></td>
+                        <td><ul>
+                            <li>FUT currency is too hard to get for free</li>
+                            <li>a change in career mose is needed</li>
+                            <li>not much visual improvements from last year</li>
+                        </ul></td>
+                        <td>A solid FIFA game, but needs more updates to make it a standout game which will be played all year until the next FIFA game</td>
+                    </tr>
+
+                </table>
+                </div>
+               
+                <!--gameVideo id appears only when corrosponding onclick event is triggered-->
+                <div id="gameVideo" class="tabcontent">
+                <!--embedded YouTube video-->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/zX0AV6yxyrQ" frameborder="0" allowfullscreen="" alt="Your browser does not support HTML5 video.">        
+                </iframe>
+                </div>
+
+                </div>
+
+            </div>
+
+        
+                <div id ="socialMedia">
+
+                        <h1>Social Media</h1>
+
+                
+
+                        <div id = "facebook">
+                                <div id = "facebookText">Like us on Facebook</div>
+                                <div id ="facebookLogo">
+                                <!-- link to facebook home page -->
+                                <a href = "https://en-gb.facebook.com/">
+                                <img src= "Images/facebook_square.jpg" alt = "Facebook Logo"></div>
+                                </a>
+                        </div>
+                        
+                        <div id = "twitter">
+                                <!-- link to twitter home page -->
+                                <div id = "twitterText">Follow us on Twitter</div>
+                                <div id ="twitterLogo">
+                                <a href = "https://twitter.com/login?lang=en-gb">
+                                <img src= "Images/twitter_logo_square.jpg" alt = "Twitter Logo"></div>
+                                </a>
+                        </div>
+                            
+                    <div id = "instagram">
+                        <div id = "instagramText">Find us on Instagram</div>
+                        <div id ="instagramLogo">
+                            <!-- link to instagram home page -->
+                            <a href = "https://www.instagram.com/?hl=en">
+                            <img src= "Images/instagram-logo-square-resized.png" alt = "Instagram Logo"></div>
+                            </a>
+                            </div>
+                </div>
+
+
+            </div>
+
+            </div>
+
+            </div>
+
+             <footer id="footer">
+
+                <div id="footertitle">
+
+                    <h1>Other Information</h1>
+
+                </div>
+
+                 <!------------------------------------------------calendar start----------------------------------------------------------->
+
+                <div id ="footer1">
+
+                  
+                    <form>
+                        <select onChange="updatecalendar(this.options)">
+                        <script type="text/javascript">
+
+                        document.write('<option value="'+(curmonth-1)+'" selected="yes">Current Month</option>')
+                            for (i=0; i<12; i++) //display option for 12 months of the year
+                            document.write('<option value="'+i+'">'+themonths[i]+' '+curyear+'</option>')
+
+
+                        </script>
+                        </select>
+                        <br></br>
+                        <div id="calendarspace">
+                        <script>
+                        //write out current month's calendar to start
+                        document.write(buildCal(curmonth, curyear, "main", "month", "daysofweek", "days", 0))
+                        </script>
+                        </div>
+
+                        </form>
+
+                </div>
+
+                <!------------------------------------------------calendar end----------------------------------------------------------->
+
+                <div id ="footer2">
+
+                <p id ="demo"></p>
+                    
+                <script>
+    
+                //get the day of the weeek and display it along with the opening times
+                document.getElementById("demo").innerHTML= "Today is " + day;
+    
+                </script>
+            
+                    
+                </div>
+
+                <div id = "footer3">
+
+                 <!--clickable image to automatically, scroll up to top of page-->
+                <a href="#" onclick="scrollToTop();return false">
+                <img src="Images/ArrowUP.png" alt="Arrow Down">
+                </a>
+                <p>Scroll Back Up The Page</p>
+               
+        
+                </div>
+
+                <div id = "footer4">
+
+                    <p>© Copyright 2018 InTheZone. All rights reserved. </p>
+                  
+                </div>
+                    
+
+
+            </footer>
+
+    </div>
+
+    
+
+
+</BODY>
+
+
+</HTML>

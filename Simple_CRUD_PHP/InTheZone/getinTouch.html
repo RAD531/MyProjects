@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<HTML>
+
+<HEAD>
+
+<!-- Used to adjust content to smaller screen sizes -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--used to avoid strange symbols/lettering on page, this meta tag covers a wide range of unicode lettering-->
+<meta charset="UTF-8">
+
+<TITLE>InTheZone</TITLE>
+
+<!-- link to stylesheet -->
+<Link href="CSS/InTheZoneStylesheet.css" rel="stylesheet" type="text/css">
+
+<!--Link to JavaScript File-->
+<script type="text/javascript" src="JavaScript/InTheZone.js"></script>
+
+<!--Favicon Image -->
+<link rel="icon" href="Images/InTheZoneLogoFavicon.png" type="image/ico" />
+
+        
+<!-- Internal JavaScript Syntax -->
+    
+
+            <script>
+
+
+            //status when user leaves page
+
+            window.onblur=function()
+            {
+                document.title="We miss you";
+            }
+
+            //status when user re-visits page/normal state
+
+            window.onfocus=function()
+            {
+                document.title="Get in Touch";
+            }
+            </script>
+
+
+</HEAD>
+
+<BODY>
+
+    <!--div wrapper-->
+    <div id = "pageWrapper">
+        <!--Using header and footer tags instead of div for browser support-->
+        <header id = "header">
+            <!--start of navigation, navigation wrapper-->
+            <div class="navigation-bar">
+
+                <div id="navigation-container">
+                        
+                    <!--logo-->    
+                    <a href = "index.html">
+                        <img src="Images/InTheZoneLogo.png" alt = "InTheZoneLogo">
+                    </a>
+                        <!--navigation selection-->
+                        <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About InTheZone</a></li>
+                                <li><a href="products.html">Products</a></li>
+                                <li><a href="findUs.html">Find Us</a></li>
+                                <li><a href="getinTouch.html">Get in Touch</a></li>
+                        </ul>
+                </div>
+
+
+                <!--progress bar underneath the navigation-->
+                <div class="progress-container">
+                    <div class="progress-bar" id="myBar"></div>
+                </div> 
+
+        </header>
+
+        <!------------------------------------------sie arrow left---------------------------------------------------------------->
+        
+        <!--left sided navigation-->
+        <div id="mySidenav" class="sidenav">
+                <!--JS to open/close left sided nav-->
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <h1>Coming Soon!</h1>
+                <ol>CTR Nitro Fueled</ol>
+                <ol>Releases on 21/06/2019</ol>
+                <img src="Images/CTRNF.jpg" alt="Crash Team Racing Nitro Fueled">
+                <br></br>
+                <ol>Resident Evil 2 Remake</ol>
+                <ol>Releases on 25/01/2019</ol>
+                <img src="Images/RE2RM.png" alt="Resident Evil 2 Remake">
+                
+        </div>
+
+        <!--left sided nav open button as hexidecimal symbol-->
+        <div id = "arrow"><span style="font-size:75px;cursor:pointer" onclick="openNav()">&#8811; </span></div>
+
+        <script>
+                //left sided nav open and close JS functions, setting a width in pixels to expand/minimise content
+                function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                }
+
+                //nav set to width 0, width decreased to show no content
+                function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                }
+        </script>
+
+        <!--------------------------------------------side arrow left end-------------------------------------------------------->
+
+        <!--------------------------------------------side nav right------------------------------------------------------------->
+
+            <div id="mySidenavright" class="sidenavright">
+                <!--right side nav open/close-->
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNavright()">&times;</a>
+                <h1>Current Game Rankings</h1>
+                <!--navigation content with links-->
+                <table>
+                    <tr>
+                        <td><img src="Images/ArrowUP.png" alt="Arrow Up"></td>
+                        <td><a href="#">1# Red Dead Redemption 2 (PS4)</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Images/ArrowDOWN.png" alt="Arrow Down"></td>
+                        <td><a href="fifa19ps4.html">2# FIFA 19 (PS4)</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Images/ArrowSIDE.png" alt="Arrow Side"></td>
+                        <td><a href="#">3# Super Smash Bros. Ultimate (Nintendo Switch)</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Images/ArrowUP.png" alt="Arrow Up"></td>
+                        <td><a href="#">4# Assassin's Creed Odyssey (PS4)</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Images/ArrowSIDE.png" alt="Arrow Side"></td>
+                        <td><a href="#">5# WWE 2K19 (PS4)</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Images/ArrowUP.png" alt="Arrow Up"></td>
+                        <td><a href="#">6# Forza Horizon 4 (XBOX ONE)</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Images/ArrowUP.png" alt="Arrow Up"></td>
+                        <td><a href="#">7# Fortnite (PC)</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Images/ArrowDOWN.png" alt="Arrow Down"></td>
+                        <td><a href="#">8# Overwatch (PC)</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Images/ArrowDOWN.png" alt="Arrow Down"></td>
+                        <td><a href="#">9# Fallout 76 (PS4)</a></td>
+                    </tr>
+
+                    </table>
+
+            </div>
+
+            <!--right sided nav open button as hexidecimal symbol-->
+            <div id = "arrowright"><span style="font-size:75px;cursor:pointer" onclick="openNavright()">&#8810; </span></div>
+
+            <script>
+                //right sided nav open and close JS functions, setting a width in pixels to expand/minimise content
+                function openNavright() {
+                document.getElementById("mySidenavright").style.width = "250px";
+                }
+
+                //nav set to width 0, width decreased to show no content
+                function closeNavright() {
+                document.getElementById("mySidenavright").style.width = "0";
+                }
+            </script>
+
+<!------------------------------------------------side nav right end------------------------------------------------------------------>        
+        <div id = "mainContent">
+
+                <!--InTheZone get in touch picture -->
+                <div id = "mainImage">
+                    <a><img src="Images/getinTouch.jpg" alt = "About In The Zone Picture of Building"></a>
+                </div>
+
+                <div id = "Introduction">
+                    
+                    <h1>Get in Touch</h1>
+                </div>
+        </div>
+
+        <div id = "mainContent2">
+
+        
+
+
+        <div id = "aboutwrapper">
+
+            <div id = "getinTouch">
+
+                <div id = "getinTouchBox1">
+                <p>If you would like to contact us, please fill in the form below. We aim to respond to email enquiries as quickly as possible but please allow two working days for a reply.</p>
+
+                </div>
+
+
+                <div id ="getinTouchBox2">
+                
+                <!-- style the star-->
+                <h3>Required Value <span id ="required">*</h3>
+                
+                <br>
+                        Name: <span id = "requried">*<br>
+                        <!--form opens up mailbox to mail to address below when submit button cliked-->
+                        <form action="mailto:BMC171817051@bmet.student.ac.uk" method="post">
+                        <input type="text" name="Name">
+                        <br><br>
+                        Email Address: <span id = "requried">*<br>
+                        <input type="email" name="email">
+                        <br><br>
+                        <!--drop down list-->
+                        <select>
+                        <option value="How did you hear about us?">How did you hear about us?</option>
+                        <option value="Social Media">Social Media</option>
+                        <option value="Marketing/Advertisment">Marketing/Advertisment</option>
+                        <option value="Word of Mouth">Word of Mouth</option>
+                        <option value="Event">Event</option>
+                        <option value="Internet Browsing">Internet Browsing</option>
+                        <option value="Passed our Shop">Passed our Shop</option>
+                        </select>
+                        <br><br>
+                        <!--drop down list-->
+                         <select>
+                        <option value="What is your message regarding?">What is your message regarding?</option>
+                        <option value="Report a problem with the website">Report a problem with the website</option>
+                        <option value="To return a product">To return a product</option>
+                        <option value="Want to work for InTheZone">Want to work for InTheZone</option>
+                        <option value="Suggest an improvement">Suggest an improvement</option>
+                        <option value="Press and Media">Press and Media</option>
+                        <option value="General enquiry">General enquiry</option>
+                        </select>
+                        <br><br>
+                        Message: <span id = "requried">*<br>
+                        <!--setting the input box size-->
+                        <textarea></textarea>
+                        <br><br>
+                        <input type="submit" value = "Send">
+                        </form>
+
+                </div>
+
+            </div>
+
+
+        
+                <div id ="socialMedia">
+
+                        <h1>Social Media</h1>
+
+                
+
+                        <div id = "facebook">
+                                <div id = "facebookText">Like us on Facebook</div>
+                                <div id ="facebookLogo">
+                                <!-- link to facebook home page -->
+                                <a href = "https://en-gb.facebook.com/">
+                                <img src= "Images/facebook_square.jpg" alt = "Facebook Logo"></div>
+                                </a>
+                        </div>
+                        
+                        <div id = "twitter">
+                                <!-- link to twitter home page -->
+                                <div id = "twitterText">Follow us on Twitter</div>
+                                <div id ="twitterLogo">
+                                <a href = "https://twitter.com/login?lang=en-gb">
+                                <img src= "Images/twitter_logo_square.jpg" alt = "Twitter Logo"></div>
+                                </a>
+                        </div>
+                            
+                    <div id = "instagram">
+                        <div id = "instagramText">Find us on Instagram</div>
+                        <div id ="instagramLogo">
+                            <!-- link to instagram home page -->
+                            <a href = "https://www.instagram.com/?hl=en">
+                            <img src= "Images/instagram-logo-square-resized.png" alt = "Instagram Logo"></div>
+                            </a>
+                            </div>
+                </div>
+
+
+            </div>
+
+            </div>
+
+            </div>
+
+             <footer id="footer">
+
+                <div id="footertitle">
+
+                    <h1>Other Information</h1>
+
+                </div>
+
+                 <!------------------------------------------------calendar start----------------------------------------------------------->
+
+                <div id ="footer1">
+
+                  
+                    <form>
+                        <select onChange="updatecalendar(this.options)">
+                        <script type="text/javascript">
+
+                        document.write('<option value="'+(curmonth-1)+'" selected="yes">Current Month</option>')
+                            for (i=0; i<12; i++) //display option for 12 months of the year
+                            document.write('<option value="'+i+'">'+themonths[i]+' '+curyear+'</option>')
+
+
+                        </script>
+                        </select>
+                        <br></br>
+                        <div id="calendarspace">
+                        <script>
+                        //write out current month's calendar to start
+                        document.write(buildCal(curmonth, curyear, "main", "month", "daysofweek", "days", 0))
+                        </script>
+                        </div>
+
+                        </form>
+
+                </div>
+
+                <!------------------------------------------------calendar end----------------------------------------------------------->
+
+                <div id ="footer2">
+
+                <p id ="demo"></p>
+                    
+                <script>
+            
+                //get the day of the weeek and display it along with the opening times
+                document.getElementById("demo").innerHTML= "Today is " + day;
+    
+                </script>
+            
+                    
+                </div>
+
+                <div id = "footer3">
+
+                <!--clickable image to automatically, scroll up to top of page-->
+                <a href="#" onclick="scrollToTop();return false">
+                <img src="Images/ArrowUP.png" alt="Arrow Down">
+                </a>
+                <p>Scroll Back Up The Page</p>
+               
+        
+                </div>
+
+                <div id = "footer4">
+
+                    <p>© Copyright 2018 InTheZone. All rights reserved. </p>
+                  
+                </div>
+                    
+
+
+            </footer>
+
+    </div>
+
+    
+
+
+</BODY>
+
+
+</HTML>

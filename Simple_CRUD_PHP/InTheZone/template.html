@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+
+<HTML>
+
+<HEAD>
+
+<!-- Used to adjust content to smaller screen sizes -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<TITLE>InTheZone</TITLE>
+
+<!-- link to stylesheet -->
+<Link href="CSS/InTheZoneStylesheet.css" rel="stylesheet" type="text/css">
+
+<!--Link to JavaScript File-->
+<script type="text/javascript" src="JavaScript/InTheZone.js"></script>
+
+<!--Favicon Image -->
+<link rel="icon" href="Images/InTheZoneLogoFavicon.png" type="image/ico" />
+
+        
+<!-- JavaScript Syntax -->
+    <script>
+            function showContent()
+            {
+                
+                /* Enables content to show when a button is pressed, normal state is hidden, the first function is for the first box in the "News and Events" section */
+
+                var x = 
+                document.getElementById("newsandeventscontent1");
+                if (x.style.display ==="block")
+                {
+                    x.style.display = "none";    
+                }
+                else
+                {
+                    x.style.display = "block";
+                }
+
+                /* Enables button to change text when pressed */
+            
+                var buttonText = 
+                document.getElementById("button1");
+                if (buttonText.value=="Show More")
+                { 
+                    buttonText.value = "Show Less";
+                }
+                else
+                {
+                    buttonText.value = "Show More";
+                }
+            }
+
+            function showContent2()
+            {
+            
+             /* Enables content to show when a button is pressed, normal state is hidden, the below function is for the second box in the "News and Events" section */
+
+            var y = 
+                document.getElementById("newsandeventscontent2");
+                if (y.style.display ==="block")
+                {
+                    y.style.display = "none";    
+                }
+                else
+                {
+                    y.style.display = "block";
+                }
+
+            /* Enables button to change text when pressed */
+
+            var buttonText = 
+                document.getElementById("button2");
+                if (buttonText.value=="Show More")
+                { 
+                    buttonText.value = "Show Less";
+                }
+                else
+                {
+                    buttonText.value = "Show More";
+                }
+
+            }
+
+            function showContent3()
+            {
+            
+             /* Enables content to show when a button is pressed, normal state is hidden, the below function is for the second box in the "News and Events" section */
+
+            var z = 
+                document.getElementById("newsandeventscontent3");
+                if (z.style.display ==="block")
+                {
+                    z.style.display = "none";    
+                }
+                else
+                {
+                    z.style.display = "block";
+                }
+            
+             /* Enables button to change text when pressed */
+
+            var buttonText = 
+                document.getElementById("button3");
+                if (buttonText.value=="Show More")
+                { 
+                    buttonText.value = "Show Less";
+                }
+                else
+                {
+                    buttonText.value = "Show More";
+                }
+
+            }
+
+            </script>
+
+            <script>
+
+            // dipslays a message on the favicon toolbar when user leaves page
+            
+            window.onscroll = function() {myFunction()};
+
+            function myFunction() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+            }
+
+            //status when user leaves page
+
+            window.onblur=function()
+            {
+                document.title="We miss you";
+            }
+
+            //status when user re-visits page/normal state
+
+            window.onfocus=function()
+            {
+                document.title="InTheZone";
+            }
+            </script>
+
+            <!--Function to scroll back to the top of screen-->
+
+            <script type="text/javascript">
+                var timeOut;
+                function scrollToTop() {
+                if (document.body.scrollTop!=0 || document.documentElement.scrollTop!=0){
+                    window.scrollBy(0,-30);
+                    timeOut=setTimeout('scrollToTop()',10);
+                }
+                else clearTimeout(timeOut);
+                }
+            </script>
+
+</HEAD>
+
+<BODY>
+
+    <!--div wrapper-->
+    <div id = "pageWrapper">
+        <!--Using header and footer tags instead of div for browser support-->
+        <header id = "header">
+            <!--start of navigation, navigation wrapper-->
+            <div class="navigation-bar">
+
+                <div id="navigation-container">
+                        
+                    <!--logo-->    
+                    <a href = "index.html">
+                        <img src="Images/InTheZoneLogo.png" alt = "InTheZoneLogo">
+                    </a>
+                        <!--navigation selection-->
+                        <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About InTheZone</a></li>
+                                <li><a href="products.html">Products</a></li>
+                                <li><a href="findUs.html">Find Us</a></li>
+                                <li><a href="getinTouch.html">Get in Touch</a></li>
+                        </ul>
+                </div>
+
+
+                <!--progress bar underneath the navigation-->
+                <div class="progress-container">
+                    <div class="progress-bar" id="myBar"></div>
+                </div> 
+
+        </header>
+
+        <!------------------------------------------sie arrow left---------------------------------------------------------------->
+        
+        <!--left sided navigation-->
+        <div id="mySidenav" class="sidenav">
+                <!--JS to open/close left sided nav-->
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <h1>Coming Soon!</h1>
+                <ol>CTR Nitro Fueled</ol>
+                <ol>Releases on 21/06/2019</ol>
+                <img src="Images/CTRNF.jpg" alt="Crash Team Racing Nitro Fueled">
+                <br></br>
+                <ol>Resident Evil 2 Remake</ol>
+                <ol>Releases on 25/01/2019</ol>
+                <img src="Images/RE2RM.png" alt="Resident Evil 2 Remake">
+                
+        </div>
+
+        <!--left sided nav open button as hexidecimal symbol-->
+        <div id = "arrow"><span style="font-size:75px;cursor:pointer" onclick="openNav()">&#8811; </span></div>
+
+        <script>
+                //left sided nav open and close JS functions, setting a width in pixels to expand/minimise content
+                function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                }
+
+                //nav set to width 0, width decreased to show no content
+                function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                }
+        </script>
+
+        <!--------------------------------------------side arrow left end-------------------------------------------------------->
+
+        <!--------------------------------------------side nav right------------------------------------------------------------->
+
+            <div id="mySidenavright" class="sidenavright">
+                <!--right side nav open/close-->
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNavright()">&times;</a>
+                <h1>Current Game Rankings</h1>
+                <!--navigation content with links-->
+                <table>
+                    <tr>
+                        <td><img src="Images/ArrowUP.png" alt="Arrow Up"></td>
+                        <td><a href="#">1# Red Dead Redemption 2 (PS4)</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Images/ArrowDOWN.png" alt="Arrow Down"></td>
+                        <td><a href="fifa19ps4.html">2# FIFA 19 (PS4)</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Images/ArrowSIDE.png" alt="Arrow Side"></td>
+                        <td><a href="#">3# Super Smash Bros. Ultimate (Nintendo Switch)</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Images/ArrowUP.png" alt="Arrow Up"></td>
+                        <td><a href="#">4# Assassin's Creed Odyssey (PS4)</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Images/ArrowSIDE.png" alt="Arrow Side"></td>
+                        <td><a href="#">5# WWE 2K19 (PS4)</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Images/ArrowUP.png" alt="Arrow Up"></td>
+                        <td><a href="#">6# Forza Horizon 4 (XBOX ONE)</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Images/ArrowUP.png" alt="Arrow Up"></td>
+                        <td><a href="#">7# Fortnite (PC)</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Images/ArrowDOWN.png" alt="Arrow Down"></td>
+                        <td><a href="#">8# Overwatch (PC)</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Images/ArrowDOWN.png" alt="Arrow Down"></td>
+                        <td><a href="#">9# Fallout 76 (PS4)</a></td>
+                    </tr>
+
+                    </table>
+
+            </div>
+
+            <!--right sided nav open button as hexidecimal symbol-->
+            <div id = "arrowright"><span style="font-size:75px;cursor:pointer" onclick="openNavright()">&#8810; </span></div>
+
+            <script>
+                //right sided nav open and close JS functions, setting a width in pixels to expand/minimise content
+                function openNavright() {
+                document.getElementById("mySidenavright").style.width = "250px";
+                }
+
+                //nav set to width 0, width decreased to show no content
+                function closeNavright() {
+                document.getElementById("mySidenavright").style.width = "0";
+                }
+            </script>
+
+<!------------------------------------------------side nav right end------------------------------------------------------------------>        
+        <div id = "mainContent">
+
+                <!--InTheZone store picture -->
+                <div id = "mainImage">
+                    <a><img src="Images/InTheZoneStore.png" alt = "About In The Zone Picture of Building"></a>
+                </div>
+
+                <div id = "Introduction">
+                    
+                    <h1>Template</h1>
+                </div>
+        </div>
+
+        <div id = "mainContent2">
+
+
+        <div id = "aboutwrapper">
+
+        
+                <div id ="socialMedia">
+
+                        <h1>Social Media</h1>
+
+                
+
+                        <div id = "facebook">
+                                <div id = "facebookText">Like us on Facebook</div>
+                                <div id ="facebookLogo">
+                                <!-- link to facebook home page -->
+                                <a href = "https://en-gb.facebook.com/">
+                                <img src= "Images/facebook_square.jpg" alt = "Facebook Logo"></div>
+                                </a>
+                        </div>
+                        
+                        <div id = "twitter">
+                                <!-- link to twitter home page -->
+                                <div id = "twitterText">Follow us on Twitter</div>
+                                <div id ="twitterLogo">
+                                <a href = "https://twitter.com/login?lang=en-gb">
+                                <img src= "Images/twitter_logo_square.jpg" alt = "Twitter Logo"></div>
+                                </a>
+                        </div>
+                            
+                    <div id = "instagram">
+                        <div id = "instagramText">Find us on Instagram</div>
+                        <div id ="instagramLogo">
+                            <!-- link to instagram home page -->
+                            <a href = "https://www.instagram.com/?hl=en">
+                            <img src= "Images/instagram-logo-square-resized.png" alt = "Instagram Logo"></div>
+                            </a>
+                            </div>
+                </div>
+
+
+            </div>
+
+            </div>
+
+            </div>
+
+             <footer id="footer">
+
+                <div id="footertitle">
+
+                    <h1>Other Information</h1>
+
+                </div>
+
+                 <!------------------------------------------------calendar start----------------------------------------------------------->
+
+                <div id ="footer1">
+
+                  
+                    <form>
+                        <select onChange="updatecalendar(this.options)">
+                        <script type="text/javascript">
+
+                            var themonths=['January','February','March','April','May','June',
+                            'July','August','September','October','November','December']
+
+                            var todaydate=new Date()
+                            var curmonth=todaydate.getMonth()+1 //get current month (1-12)
+                            var curyear=todaydate.getFullYear() //get current year
+
+                        function updatecalendar(theselection){
+                            var themonth=parseInt(theselection[theselection.selectedIndex].value)+1
+                            var calendarstr=buildCal(themonth, curyear, "main", "month", "daysofweek", "days", 0)
+                            if (document.getElementById)
+                                document.getElementById("calendarspace").innerHTML=calendarstr
+                        }
+
+                        document.write('<option value="'+(curmonth-1)+'" selected="yes">Current Month</option>')
+                            for (i=0; i<12; i++) //display option for 12 months of the year
+                            document.write('<option value="'+i+'">'+themonths[i]+' '+curyear+'</option>')
+
+
+                        </script>
+                        </select>
+                        <br></br>
+                        <div id="calendarspace">
+                        <script>
+                        //write out current month's calendar to start
+                        document.write(buildCal(curmonth, curyear, "main", "month", "daysofweek", "days", 0))
+                        </script>
+                        </div>
+
+                        </form>
+
+                </div>
+
+                <!------------------------------------------------calendar end----------------------------------------------------------->
+
+                <div id ="footer2">
+
+                <p id ="demo"></p>
+                    
+                <script>
+            
+                var day;
+
+                switch (new Date().getDay())
+                {
+                    case 0:
+                        day = "<h1>Sunday</h1><p>We are closed</p>"
+                break;
+                    case 1:
+                        day = "<h1>Monday</h1><p>We are open today from:</p><p>9.00-16.00";
+                 break;
+                    case 2: 
+                        day = "<h1>Tuesday</h1><p>We are open today from:</p><p>9.00-16.00";
+                break;
+                    case 3:
+                        day = "<h1>Wednesday</h1><p>We are open today from:</p><p>9.00-16.00";
+                break;
+                    case 4: 
+                        day = "<h1>Thursday</h1><p>We are open today from:</p><p>9.00-16.00";
+                break;
+                    case 5:
+                        day = "<h1>Friday</h1><p>We are open today from:</p><p>9.00-16.00";
+                break;
+                    case 6: 
+                        day = "<h1>Sunday</h1><p>We are closed</p>";
+                }
+    
+                document.getElementById("demo").innerHTML= "Today is " + day;
+    
+                </script>
+            
+                    
+                </div>
+
+                <div id = "footer3">
+
+                
+                <a href="#" onclick="scrollToTop();return false">
+                <img src="Images/ArrowUP.png" alt="Arrow Down">
+                </a>
+                <p>Scroll Back Up The Page</p>
+               
+        
+                </div>
+
+                <div id = "footer4">
+
+                    <p>© Copyright 2018 InTheZone. All rights reserved. </p>
+                  
+                </div>
+                    
+
+
+            </footer>
+
+    </div>
+
+    
+
+
+</BODY>
+
+
+</HTML>

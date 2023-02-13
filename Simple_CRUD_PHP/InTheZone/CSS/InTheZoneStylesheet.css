@@ -1,0 +1,2038 @@
+/*avoids gaps at the edge of page*/
+body { padding: 0; margin: 0; }
+
+/*wraps entire page in div*/
+#pageWrapper{
+    padding: 0%; 
+    width: 100%;
+    height: 100%;
+    margin: auto;
+} 
+
+/*header of the page*/
+#header{
+    width: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/*---------------------------nav bar logo---------------------------*/
+
+/*logo in the header with the nav*/
+.logo {
+    float: left;
+  }
+  /*---------------Top Navigation Bar-------------------*/
+  
+/*navigation wrapper*/
+#navigation-container {
+    width: 100%;
+    margin: 0 auto;
+    height: 85px;
+}
+  
+/* formats the navigation*/
+.navigation-bar {
+    background-color: white;
+    height: 85px;
+    width: 100%;
+    text-align:center;
+}
+
+
+.navigation-bar img{
+    float:left;
+}
+
+.navigation-bar ul {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    display:inline-block;
+    vertical-align:top;
+}
+  
+.navigation-bar li {
+    list-style-type: none;
+    padding: 0px;
+    height: 24px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    display: inline-block;
+}
+
+/*add colour and size to the navigaion choises */
+.navigation-bar li a {
+    color: black;
+    font-size: 16px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    line-height: 70px;
+    padding: 5px 15px;
+    opacity: 0.7;
+    display: block;
+}
+
+/*adds a hover effect*/
+.navigation-bar li a:hover{
+    background-color: rgb(131,15,35);
+    color: white;
+}
+
+.navigation-bar input{
+    float: right;
+    position: relative;
+    right: 150px;
+    top: -19px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    background-color: rgb(131,15,35);
+    color: white;
+}
+  
+#menu {
+    float: right;
+}
+
+/*--------------------------end navbar---------------------------*/
+
+/*--------------------------progress bar-------------------------*/
+
+/*usual background colour, indicates percentage of page not scrolled to*/
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background: #ccc;
+  }
+  
+/*indicates amount of page that has been scrolled through*/
+.progress-bar {
+    height: 8px;
+    background: rgb(131,15,35);
+    width: 0%;
+}
+/*--------------------------end progress bar-------------------------*/
+
+
+/*--------------------------sidenav left-------------------------*/
+
+/*formats and sizes the left sided nav*/
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    /*hides the nav*/
+    z-index: 101;
+    top: 0;
+    left: 0;
+    background-color: #ccc;
+    /*hides the nav*/
+    overflow-x: hidden;
+    overflow: hidden;
+    /*transistion to open the nav*/
+    transition: 0.5s;
+    padding-top: 60px;
+    /*skews the nav for effect*/
+    transform: skew(3deg);
+}
+
+/*formats the arrow which opens up the left sided nav*/
+#arrow {
+    /*keeps the arrow stuck to the middle of screen when scrolling*/
+    position: fixed;
+    left: 0%;
+    top: 80%;
+    width: 8em;
+    margin-top: -2.5em;
+    z-index: 100;
+    color:#ccc;
+    text-align: left;
+}
+
+#arrow:hover{
+    color: white;
+}
+
+/*formats the close button in the nav*/
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav h1{
+    font-size: 20px;
+    padding: 8px 8px 8px 32px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    text-align: center;
+    background-color: rgb(131,15,35);
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+/*formats the text in the nav*/
+.sidenav ol{
+    font-size: 15px;
+    display: block;
+    transition: 0.3s;
+    text-align: center;
+    color: rgb(131,15,35);
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+.sidenav img{
+    width: 100%;
+}
+  
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+ 
+/*formats the close button in the nav on hover*/
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: rgb(131,15,35);
+    font-weight: bold;
+}
+  
+/*changes sizing of nav based on screen size*/
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+/*---------------------side nav left---------------------------*/
+
+/*--------------------------sidenav right-------------------------*/
+.sidenavright {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 101;
+    top: 0;
+    right: 0;
+    background-color: #ccc;
+    overflow-x: hidden;
+    overflow: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    transform: skew(-3deg);
+}
+
+#arrowright {
+    position: fixed;
+    right: -4%;
+    top: 80%;
+    width: 8em;
+    margin-top: -2.5em;
+    z-index: 100;
+    color: #ccc;
+}
+
+#arrowright:hover{
+    color:white;
+}
+  
+.sidenavright a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    color: rgb(131,15,35);
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenavright h1{
+    font-size: 20px;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+  
+.sidenavright a:hover {
+    color: #f1f1f1;
+}
+  
+.sidenavright .closebtn {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    font-size: 36px;
+    margin-right: 50px;
+}
+
+.sidenavright table{
+    border-collapse: collapse;
+}
+
+.sidenavright table td{
+    margin: 0px;
+    padding: 5px;
+    border: 0;
+    text-align: left;
+}
+  
+@media screen and (max-height: 450px) {
+    .sidenavright {padding-top: 15px;}
+    .sidenavright a {font-size: 18px;}
+    .sidenavright span {display: none;}
+}
+/*---------------------side nav right---------------------------*/
+
+/*represents a first part of a page's content*/
+#mainContent{
+    clear: both;
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    color: #ccc;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border: 0px;
+    padding: 0px; 
+}
+
+/*represents a second part of a page's content*/
+#mainContent2{
+    clear: both;
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    color: #ccc;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border: 0px;
+    padding: 0px; 
+    position: relative;
+}
+
+/*can represent the main image or main media*/
+#mainImage{
+    width: 100%;
+    height: auto;
+}
+
+#mainImage iframe{
+    width: 100%;
+}
+
+#mainImage img{
+    width: 100%;
+    vertical-align: bottom
+}
+
+#backgroundvideo {
+    /*  making the home page background-video fullscreen  */
+      position: absolute;
+      right: 0; 
+      bottom: 0;
+      min-width: 100%; 
+      min-height: 100%;
+      width: auto; 
+      height: 100%;
+      /*push it behind other content*/
+      z-index: -100;
+    }
+
+#backgroundvideo video{
+    min-width: 100%;
+    min-height: 100%;
+}
+
+/*home page video*/  
+#video{
+    /*make the remaining content aroudn div black in case video does not fit div*/
+    background-color: black;
+    height:400px;
+    width: 100%;
+    border:0px;
+    padding: 0px;
+    position: relative;
+}
+
+#video video{
+    padding:0px;
+    margin: 0px auto;
+    display: inline-block;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+}
+
+/*Introduction to page div*/
+#Introduction{
+    float: left;
+    width: 100%;
+    height:auto;
+    text-align: center;
+    font-size: 15px;
+    color: #ccc;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    background-color: rgb(131,15,35);
+    padding-bottom: 5%;
+    
+}
+
+#aboutwrapper{
+    background-color: #ccc;
+}
+
+#templatecontent{
+    height: auto;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 20px 10px 0 rgba(0,0,0,0.12);
+    margin: 16px;
+    padding: 0.01em 16px;
+    background-color: white;
+}
+
+/*acts as a table for two divs on the about page*/
+#templatecontent table{
+    table-layout: fixed; 
+    width: 100%;
+    height: 368px;
+}
+
+/*right sided table div*/
+#tdright{
+    min-width: 50%;
+    border-style: none;
+    
+}
+
+/*left sided table div*/
+#tdleft{
+    border-style: none;
+}
+
+#tdleft h1{
+    color: rgb(131,15,35);
+    width: 90%;
+}
+
+#tdleft p{
+    color: black;
+    width: 90%;
+    font-size: 100%;
+}
+
+/*about arcade video*/
+#templatecontent video{
+    width: 100%;
+    height: 356px;
+    border:0px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 20px 10px 0 rgba(0,0,0,0.12);
+    margin-top: 2%;
+} 
+
+/*about us bottom div*/
+#templatecontent2{
+    width: auto; 
+    height: 400px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 20px 10px 0 rgba(0,0,0,0.12);
+    margin: 16px;
+    padding: 0.01em 16px;
+    background-color: white;
+}
+
+/*styling list*/
+#templatecontent2 ul{
+    line-height: 25px;
+    color: black;
+    list-style-type: square;
+}
+
+#templatecontent2 h1{
+    background-color: #464444;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    height: 20%;
+    line-height: 70px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 20px 10px 0 rgba(0,0,0,0.12);
+    
+    
+}
+
+#findUs{
+    height: 1000px;
+    width: 100%;
+    position: relative;
+}
+
+#findUs h2{
+    color: rgb(131,15,35); 
+}
+
+#findUs p{
+    color: black;
+}
+
+/*styling link*/
+#findUs a:link{
+    color: black;
+    text-decoration: none;
+}
+
+/*styling link after being cliked*/
+#findUs a:visited{
+    color: rgb(131,15,35);
+    text-decoration: none;
+}
+
+#findUsBox1{
+    height: 320px;
+    width: 42%;
+    /*adds a shadow to the div*/
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 20px 10px 0 rgba(0,0,0,0.12);
+    margin: 30px;
+    padding: 0.01em 16px;
+    background-color: white;
+    position: absolute;
+}
+
+
+#findUsBox2{
+    height: 320px;
+    width: 42%;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 20px 10px 0 rgba(0,0,0,0.12);
+    margin: 30px;
+    padding: 0.01em 16px;
+    background-color: white;
+    position: absolute;
+    right: 5px;
+}
+
+#findUsBox3{
+    height: 450px;
+    width: 93%;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 20px 10px 0 rgba(0,0,0,0.12);
+    margin: 30px;
+    padding: 0.01em 16px;
+    background-color: white;
+    position: absolute;
+    top: 40%;
+}
+
+#findUsBox3 h3{
+    color: rgb(131,15,35);
+}
+
+#findUsBox3 h4{
+    color: black;
+}
+
+#findUsBox3 p{
+    font-weight: initial;
+    margin: 15px;
+
+}
+
+/*transport icons positioned exact*/
+#car img{
+    position: absolute;
+    left: 15%;
+    top: 40px;
+}
+
+#train img{
+    position: absolute;
+    top: 40px;
+    left: 35%;
+}
+
+#metro img{
+    position: absolute;
+    top: 40px;
+    left: 55%;
+}
+
+#bus img{
+    position: absolute;
+    top: 40px;
+    left: 75%;
+}
+
+
+.tab button.active {
+    background-color: #ccc;
+}
+  
+.tabcontent {
+    /*hide the content until relevant button pressed*/
+    display: none;
+    top: 120px;
+    position: absolute;
+    bottom: 15px;
+    text-align: center;
+    width: 95%; 
+}
+
+#getinTouch{
+    height: 1000px;
+    width: 100%;
+    position: relative;
+}
+
+#getinTouchBox1{
+    height: 200px;
+    width: 93%;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 20px 10px 0 rgba(0,0,0,0.12);
+    margin: 30px;
+    padding: 0.01em 16px;
+    background-color: white;
+    position: absolute;
+    font-size: 25px;
+    color: black;
+}
+
+#getinTouchBox1 p{
+    position: absolute;
+    bottom: 25%;
+    text-align: center;
+    width: 95%;
+}
+
+#getinTouchBox2{
+    height: 600px;
+    width: 93%;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 20px 10px 0 rgba(0,0,0,0.12);
+    margin: 30px;
+    padding: 0.01em 16px;
+    background-color: white;
+    position: absolute;
+    top: 25%;
+    color: rgb(131,15,35);
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+#getinTouchBox2 h3{
+    color: black;
+}
+
+#getinTouchBox2 select{
+    height: 30px;
+    text-align: center;
+    text-align-last: center;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+#getinTouchBox2 input[type=submit]{
+    height: 50px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    background-color: rgb(131,15,35);
+    color: white;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 20px 10px 0 rgba(0,0,0,0.12);
+}
+
+#getinTouchBox2 input{
+    width: 100px;
+    /*transistion effect when box has been entered*/
+    -webkit-transition: width .35s ease-in-out;
+    transition: width .35s ease-in-out;
+}
+
+#getinTouchBox2 input:focus{
+    /*increase width when entering input box*/
+    width: 250px;
+}
+
+#getinTouchBox2 textarea{
+    width: 350px;
+    height: 100px;
+  }
+
+#required{
+    /*style a character*/
+    color: rgb(131,15,35);
+}
+
+#backgroundplatform{
+    height: auto;
+}
+
+/*------------------------start of first products page------------------------------------------------*/
+/*push the xbox and PS4 divs up to this fake div which wraps them together*/
+#fakeDiv{
+    position: relative;
+    height: 500px;
+    clear: both;
+}
+
+#fakeDiv a:link{
+    text-decoration: none;
+    color: white;
+}
+
+/*have no automatic colour change when link clicked*/
+#fakeDiv a:visited{
+    text-decoration: none;
+    color: white;
+}
+
+#fakeDiv2{
+    position: relative;
+    height: 500px;
+    clear: both;
+}
+
+#fakeDiv2 a:link{
+    text-decoration: none;
+    color: white;
+}
+
+#fakeDiv2 a:visited{
+    text-decoration: none;
+    color: white;
+}
+
+/*playstation image*/
+.psSkew{
+    float: left;
+    width: 100%;
+    height: 100%;
+    /*make div appear as half cut*/
+    clip-path: polygon(0 100%, 0 0, 100% 100%);
+    background-image: url("../Images/ps4Background.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    border-bottom: solid 6px #ccc;
+    z-index: -1;
+}
+
+/*text appear when hovering over div*/
+.overlayPS{
+    position: absolute; 
+    bottom: 0; 
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1; 
+    width: 100%;
+    transition: .5s ease;
+    /*hidden when in normal state*/
+    opacity:0;
+    color: white;
+    font-size: 130%;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    height: 50%;
+    line-height: 250px;
+    text-decoration: none;
+}
+
+/*appear when hovering over div*/
+.psSkew:hover .overlayPS {
+    opacity: 1;
+}
+
+.xboxSkew{
+    position: absolute;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    background-image: url("../Images/xbox-one-background.jpg");
+    border-bottom: solid 6px #ccc;
+    
+}
+
+.overlayXbox{
+    position: absolute; 
+    top: 0; 
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1; 
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 130%;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    height: 50%;
+    line-height: 250px;
+    text-align: right;
+}
+
+.xboxSkew:hover .overlayXbox {
+    opacity: 1;
+}
+
+.PCSkew{
+    float: left;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 100%, 100% 0, 100% 100%);
+    background-image: url("../Images/pcBackground.png");
+    background-repeat: no-repeat;
+    border-top: solid 6px #ccc;
+}
+
+.overlayPC{
+    position: absolute; 
+    bottom: 0; 
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1; 
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 130%;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    height: 50%;
+    line-height: 250px;
+    text-align: right;
+}
+
+.PCSkew:hover .overlayPC {
+    opacity: 1;
+}
+            
+.ninSwSkew{
+    position: absolute;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    clip-path: polygon(0 0, 0 100%, 100% 0);
+    background-image: url("../Images/ninSwitchBackground.jpg");
+    border-top: solid 6px #ccc;
+}
+
+.overlayNin{
+    position: absolute; 
+    top: 0; 
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1; 
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 130%;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    height: 50%;
+    line-height: 250px;
+    text-align: left;
+}
+
+.ninSwSkew:hover .overlayNin {
+    opacity: 1;
+}
+
+/*internet explorer settings, as clip-path does not work for I.E*/
+
+@media screen and (min-width:0\0) and (min-resolution: +72dpi) {
+
+    .psSkew{
+        width: 50%;
+        float: left;
+    }
+
+    .overlayPS{
+        font-size: 120%;
+    }
+    
+    .xboxSkew {  
+        width: 50%;
+        float: right;
+        left: 50%;
+        background-size: 700px 506px;
+    }
+
+    .overlayXbox{
+        font-size: 120%;
+    }
+
+    .PCSkew{
+        width: 50%;
+        float: left;
+        background-size: 700px 506px;
+    }
+
+    .overlayPC{
+        right: 50%;
+        font-size: 120%;
+    }
+
+    .ninSwSkew{
+        width: 50%;
+        float: left;
+        left: 50%;
+    }
+
+    .overlayNin{
+        font-size: 120%;
+    }
+
+}
+
+/*/*MS edge settings, as clip-path does not work for Ms Edge*/
+
+@supports (-ms-ime-align:auto) {
+    .psSkew{
+        width: 50%;
+        float: left;
+    }
+
+    .overlayPS{
+        font-size: 120%;
+    }
+    
+    .xboxSkew {  
+        width: 50%;
+        float: right;
+        left: 50%;
+        background-size: 700px 506px;
+    }
+
+    .overlayXbox{
+        font-size: 120%;
+    }
+
+    .PCSkew{
+        width: 50%;
+        float: left;
+        background-size: 700px 506px;
+    }
+
+    .overlayPC{
+        right: 50%;
+        font-size: 120%;
+    }
+
+    .ninSwSkew{
+        width: 50%;
+        float: left;
+        left: 50%;
+    }
+
+    .overlayNin{
+        font-size: 120%;
+    }
+  }
+
+/*------------------------End of first products page------------------------------------------------*/
+
+/*-----------------------start product section----------------------------*/
+
+#platformWrapper{
+    width: 100%;
+    height: auto;
+}
+
+#platformtable{
+    width: 100%;
+}
+
+#platformtable table{
+    table-layout: fixed; 
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#platformtable table img{
+   width: 100%;
+}
+
+/*platform images at top of screen, warpped into table columns*/
+#tdps4{
+    border: 5px solid #ccc;
+}
+
+
+#tdxbox{
+    border: 5px solid #ccc;
+}
+
+#tdpc{
+    border: 5px solid #ccc;
+}
+
+#tdwii{
+    border: 5px solid #ccc;
+}
+
+/*products table with products in with product information*/
+#productsBox{
+    height: auto;
+    width: 93%;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 20px 10px 0 rgba(0,0,0,0.12);
+    margin: 2%;
+    padding: 0.01em 1.5%;
+    background-color: white;
+    position: relative;
+    font-size: 100%;
+    color: black;
+    top: 15px;
+}
+
+#productTable{
+    width: 100%;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+#productTable table{
+    /*no spacing between borders*/
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+#productTable th{
+    cursor: pointer;
+    background-color: #ccc;
+    padding: 16px;
+    color: black;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 20px 10px 0 rgba(0,0,0,0.12);
+    border: 2px solid rgb(131,15,35);
+}
+
+
+#productTable td{
+    border: 0;
+    padding: 16px;
+
+}
+
+/*every even table row to have a grey background*/
+#productTable tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+
+/*every odd table row to have a dark red background*/
+#productTable tr:nth-child(odd) {
+    background-color: rgb(131,15,35);
+    color: white;
+}
+
+/*product images*/
+#productTable img{
+    /*width set a percentage to skrink with screen size*/
+    width: 40%;
+}
+
+
+
+/*-----------------------End product section----------------------------*/
+
+
+/*-----------------------start game section------------------------------*/
+
+#gameWrapperSM{
+    background-color: #ccc;
+    text-align: center;
+}
+
+#gameWrapper{
+    width: 100%;
+    height: auto;
+}
+
+#gameBox{
+    height: auto;
+    width: 93%;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 20px 10px 0 rgba(0,0,0,0.12);
+    margin: 2%;
+    padding: 0.01em 1.5%;
+    background-color: white;
+    position: relative;
+    font-size: 100%;
+    color: black;
+    top: 15px;
+    display: inline-block;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+#gameTitle{
+    background-color: rgb(131,15,35);
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    width: 200px;
+    text-align: center; 
+}
+
+#gamePicture{
+    /*game image to appear to the left of content*/
+    float: left;
+    width: 30%;
+}
+
+#gamePicture img{
+    /*gap between content and image*/
+    width: 80%;
+}
+
+#gameContent{
+    float: left;
+    width: 70%;
+    text-align: left;
+}
+
+#gameContent select{
+    height: 30px;
+    text-align: center;
+    text-align-last: center;
+}
+
+#gameContentBold{
+    font-weight: bold;
+    color: rgb(131,15,35);
+}
+
+#idNum{
+    /*ID num to appear to the left of age rating image*/
+    float: left;
+}
+
+#gameContent img{
+    float: left;
+    margin-left: 20px;
+}
+
+.gamesTab{
+    clear: both;
+    height:500px;
+    position: relative;
+}
+
+.gamesTab h3{
+    color: rgb(131,15,35);
+}
+
+#gameSpecsButton{
+    margin-top: 69px;
+    float: left;
+    width: 33.33%;
+    text-align: center;
+    background-color: #ccc;
+    font-weight: bold;
+}
+
+#gameReviewsButton{
+    margin-top: 69px;
+    float: left;
+    width: 33.33%;
+    text-align: center;
+    background-color: #ccc;
+    font-weight: bold;
+}
+
+#gameVideoButton{
+    margin-top: 69px;
+    float: left;
+    width: 33.33%;
+    text-align: center;
+    background-color: #ccc;
+    font-weight: bold;
+}
+
+#gameSpecsButton:hover{
+   cursor: pointer;
+   background-color: rgb(131,15,35);
+   color: white;
+}
+
+#gameReviewsButton:hover{
+    cursor: pointer;
+    background-color: rgb(131,15,35);
+    color: white;
+}
+
+#gameVideoButton:hover{
+    cursor: pointer;
+    background-color: rgb(131,15,35);
+    color: white;
+}
+
+#gameSpecs{
+    background-color: #ddd;
+    width: 100%;
+    /*sets a y axis scroll bar when content goes past div height*/
+    overflow-y: auto;
+}
+
+#gameReviews{
+    background-color: #ddd;
+    width: 100%;
+    overflow-y: auto;
+}
+
+#gameVideo{
+    background-color: #ddd;
+    width: 100%;
+}
+
+#gameVideo iframe{
+    width: 44.83%;
+    min-width: 220px;
+    margin-top: 20px;
+    border: 5px solid rgb(131,15,35);
+}
+
+#gameReviews table{
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+#gameReviews th{
+    background-color: #ccc;
+    padding: 16px;
+    color: black;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 20px 10px 0 rgba(0,0,0,0.12);
+    border: 2px solid rgb(131,15,35);
+}
+
+
+#gameReviews td{
+    border: 0;
+    padding: 16px;
+}
+
+#gameReviews tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+
+#gameReviews tr:nth-child(odd) {
+    background-color: rgb(131,15,35);
+    color: white;
+}
+
+#gameReviews table li{
+    line-height: 40px;
+}
+
+
+/*-----------------------end game section--------------------------------*/
+
+
+/*-----------------------start carousel-------------------------------------*/
+
+.carousel {
+    position: relative;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+    margin-top: 26px;
+}
+
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-open:checked + .carousel-item {
+    position: static;
+    opacity: 100;
+}
+
+.carousel-item {
+    position: absolute;
+    opacity: 0;
+    /*transition for the change in images*/
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+}
+
+.carousel-item img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.carousel-control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    /*changes cursor icon to a pointer*/
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 9;
+}
+
+/*posistioning the controls for left and right*/
+.carousel-control.prev {
+    left: 2%;
+}
+
+.carousel-control.next {
+    right: 2%;
+}
+
+.carousel-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #aaaaaa;
+}
+
+/*selecting child desendants*/
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
+    display: block;
+}
+
+.carousel-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 9;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.carousel-bullet {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+}
+
+.carousel-bullet:hover {
+    color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+    color: #428bca;
+}
+
+#title {
+    width: 100%;
+    position: absolute;
+    padding: 0px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 27px;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Open Sans', sans-serif;
+    z-index: 9999;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+}
+
+
+
+/*----------------------end carousel-------------------------------------*/
+
+/*news and events section on home page*/
+#newsandevents{
+    clear: both;
+    width: 100%;
+    height:500px;
+    overflow: hidden;
+    position: relative;
+        
+}
+
+#newsandevents a:link{
+    color: black;
+    text-decoration: none;
+}
+
+#newsandevents a:visited{
+    color: black;
+    text-decoration: none;
+}
+
+
+
+#newsandevents h1{
+    
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 293%;
+    background-color: rgb(131,15,35);
+    color: #ccc;
+}
+
+
+#newsandeventsbox1 {
+
+    width:29.3%;
+    height: 300px;
+    position: absolute;
+    top: 28%;
+    left: 2.5%;
+    text-align: center;
+    background-color: rgb(131,15,35);
+    /*change transparency on whole div*/
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    border-radius: 20px;
+}
+
+#newsandeventsbox1:hover{
+    /*full transparency*/
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+
+#newsandeventsbox1 h1{
+    font-size: 150%;
+    margin-bottom: 7%;
+}
+
+#newsandeventscontent1{
+    display: none;
+}
+
+
+#newsandeventsbox1 p{
+    font-size: 90%;
+    margin: 4px;
+}
+
+#newsandeventsbox1 img{
+    padding: 2px;
+    width: 40%;
+    height: 40%;
+}
+
+#newsandeventsbox2 {
+
+    width:29.3%;
+    height: 300px;
+    position: absolute;
+    top: 28%;
+    left: 35.3%;
+    text-align: center;
+    background-color: rgb(131,15,35);
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    border-radius: 20px;
+
+}
+
+#newsandeventsbox2:hover{
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+
+#newsandeventsbox2 h1{
+    font-size: 150%;
+    margin-bottom: 7%;
+}
+
+#newsandeventscontent2{
+    display: none;
+}
+
+#newsandeventsbox2 p{
+    font-size: 81%;
+    margin: 4px;
+}
+
+#newsandeventsbox2 img{
+    padding: 8px;
+    width: 40%;
+    height: 40%;
+}
+
+#newsandeventsbox3 {
+
+    width:29.3%;
+    height: 300px;
+    position: absolute;
+    top: 28%;
+    right: 2.5%;
+    text-align: center;
+    background-color: rgb(131,15,35);
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    border-radius: 20px;
+
+}
+
+#newsandeventsbox3:hover{
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+#newsandeventsbox3 h1{
+    font-size: 150%;
+    margin-bottom: 7%;
+}
+
+#newsandeventscontent3{
+    display: none;
+}
+
+#newsandeventsbox3 p{
+    font-size: 100%;
+    margin: 8px;
+}
+
+#newsandeventsbox3 img{
+    width: 40%;
+    height: 40%;
+}
+
+#socialMedia{
+    clear: both;
+    display: inline-block;
+    margin-bottom: -23px;
+    width: 15%;
+    height:150px;
+    font-weight: bold;
+    text-align: center;
+    color: #ccc;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    background-color: rgb(131,15,35);
+    /*hide anything past width and height size*/
+    overflow: hidden;
+    position: relative;
+    /*transformation when div expands*/
+    -webkit-transition: width 2s;
+    transition: width 2s;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    border-radius: 20px;
+    
+}
+
+#socialMedia div{
+
+    visibility: hidden;
+}
+
+#socialMedia:hover{
+    width: 100%;
+    display: inline-block;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+#socialMedia:hover  div{
+    /*on hover, show content*/
+    visibility: visible;
+}
+
+#socialMedia h1{
+    font-size: 1.5vw;
+    line-height: 210px;
+}
+
+/*posistion each social media div exact*/
+#facebook{
+    width: 29.3%;
+    height: 81px;
+    position: absolute;
+    top: 6.66%;
+    left: 3.2%;
+    text-align: center;
+}
+
+#facebookText{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #ccc;
+    font-size: 1.5vw;
+    text-align: center;
+}
+
+#facebookLogo{
+    
+    padding: 5px;
+}
+
+#twitter{
+    width:29.3%;
+    height: 81px;
+    position: absolute;
+    top: 6.66%;
+    left: 36%;
+    text-align: center;
+
+}
+
+#twitterText{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #ccc;
+    font-size: 1.5vw;
+    text-align: center;
+}
+
+#twitterLogo{
+    
+    padding: 5px;
+}
+
+#instagram{
+    width: 29.3%;
+    height: 81px;
+    position: absolute;
+    top: 6.66%;
+    right: 2.5%;
+    text-align: center;
+
+}
+
+#instagramText{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #ccc;
+    font-size: 1.5vw;
+    text-align: center;
+}
+
+#instagramLogo{
+    
+    padding: 5px;
+}
+
+/*--------------------------start calendar----------------------------------*/
+
+#footer1 select{
+    float: left;
+    padding-bottom: 4%;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+.main {
+    width:200px;
+    }
+    
+    .month {
+    background-color:rgb(131,15,35);
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color:white;
+    }
+    
+    .daysofweek {
+    background-color:gray;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color:white;
+    }
+    
+    .days {
+    font-size: 12px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color:black;
+    background-color: lightyellow;
+    padding: 2px;
+    }
+    
+    .days #today{
+    font-weight: bold;
+    color: rgb(131,15,35);
+    }
+
+/*--------------------------end calendar----------------------------------*/
+
+#footer{
+    /*clear any above divs, start on the section*/
+    clear: both;
+    width: 100%;
+    height: 300px;
+    background-color:white;
+    overflow: hidden;
+    position:relative;
+}
+
+#footertitle{
+    width: 100%;
+    height: 40px;
+    background-color:rgb(131,15,35);
+    position: absolute;
+    top: 10px;
+    display: inline-block;
+}
+
+#footertitle h1{
+    color: #ccc;
+    text-align:center;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#footer li{
+    list-style-type: none;
+    font-size: 17px;
+    margin: 10px 0;
+}
+
+#footer1{
+    width: 18.31%;
+    height: 250px;
+    text-align: center;
+    color: black;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 23.33%;
+    left: 6%;
+}
+
+#footer1 li{
+    font-size: 100%;
+}
+
+#footer2{
+    width: 18.31%;
+    height: 250px;
+    text-align: center;
+    color: black;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 25%;
+    left: 40%;
+    
+}
+
+#footer2 a:link{
+    color: black;
+    text-decoration: none;
+}
+
+#footer2 a:visited{
+    color: rgb(131,15,35);
+    text-decoration: none;
+}
+
+#footer3{
+    width: 18.31%;
+    height: 250px;
+    text-align: center;
+    color: black;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 23.33%;
+    right: 7%;
+}
+
+#footer4{
+    width: 18.31%;
+    height: 250px;
+    text-align: center;
+    color: black;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 200px;
+    right: 7%;
+    float:left;
+}
+
+/*using the @media function, the follwing content changes to fit smaller screens*/
+
+@media screen and (max-width: 850px) {
+    
+    /* no hover over title for smaller devices as they are touchsreen*/
+    .overlayPS{
+        opacity:1;
+    }
+    
+    .overlayXbox{
+        opacity:1;
+    }
+    
+    .overlayPC{
+        opacity:1;
+    }
+
+    .overlayNin{
+        opacity:1;
+    }
+
+    /*-------------------------------------------------------------*/
+
+    #productTable img{
+        width: 100%;
+    }
+    
+    #getinTouch{
+        height: 900px;
+    }
+    
+    #getinTouchBox1{
+        height: 200px;
+        width: 80%;
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 20px 10px 0 rgba(0,0,0,0.12);
+        margin: 30px;
+        padding: 0.01em 16px;
+        background-color: white;
+        position: absolute;
+        font-size: 25px;
+    }
+
+    #getinTouchBox1 p{
+        text-align: center;
+        width: 95%;
+        font-size: 20px;
+        top:5%;
+    }
+    
+    #getinTouchBox2{
+        height: 600px;
+        width: 80%;
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 20px 10px 0 rgba(0,0,0,0.12);
+        margin: 30px;
+        padding: 0.01em 16px;
+        background-color: white;
+        position: absolute;
+        top: 25%;
+        color: rgb(131,15,35);
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    }
+
+    #getinTouchBox2 textarea{
+        width: 280px;
+        height: 100px;
+      }
+    
+    #findUs{
+        height: 1400px;
+        width: 100%;
+        position: relative;
+    }
+    
+    #findUsBox1{
+        height: 320px;
+        width: 80%;
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 20px 10px 0 rgba(0,0,0,0.12);
+        margin: 30px;
+        padding: 0.01em 16px;
+        background-color: white;
+        position: absolute;
+    }
+    
+    
+    #findUsBox2{
+        height: 370px;
+        width: 80%;
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 20px 10px 0 rgba(0,0,0,0.12);
+        margin: 30px;
+        padding: 0.01em 16px;
+        background-color: white;
+        position: absolute;
+        top: 400px;
+        left: 0%;
+    }
+    
+    #findUsBox3{
+        height: 450px;
+        width: 80%;
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 20px 10px 0 rgba(0,0,0,0.12);
+        margin: 30px;
+        padding: 0.01em 16px;
+        background-color: white;
+        position: absolute;
+        top: 850px;
+    }
+
+    /*changes image size from pixels to percentage to fit smaller screen sizes*/
+
+    #car img{
+       width: 6.5%;
+       height: 8%;
+    }
+    
+    #train img{
+        width: 6.5%;
+        height: 8%;
+    }
+    
+    #metro img{
+        width: 6.5%;
+        height: 8%;
+    }
+    
+    #bus img{
+        width: 6.5%;
+        height: 8%;
+    }
+    
+    /* news and events section to fit to smaller screen sizes. news and events boxes to appear underneath each other. */
+
+    #newsandevents{
+        width: 100%;
+        height:1200px;
+        clear: both;
+        position: relative;
+            
+    }
+    
+    
+    #newsandeventsbox1 {
+    
+        width:95%;
+        height: 300px;
+        position: absolute;
+        text-align: center;
+        background-color: rgb(131,15,35);
+        top: 15%;
+        
+    }
+
+    #newsandeventsbox1 img{
+        width: 30%;
+        height: 30%;
+    }
+      
+    #newsandeventsbox2 {
+
+        width:95%;
+        height: 300px;
+        position: absolute;
+        text-align: center;
+        background-color: rgb(131,15,35);
+        top: 43.5%;
+        left: 3%;
+
+    }
+
+    #newsandeventsbox2 img{
+        width: 20%;
+        height: 20%;
+    }
+    
+    
+    #newsandeventsbox3 {
+    
+        width:95%;
+        height: 300px;
+        position: absolute;
+        top: 72%;
+        left: 3%;
+        text-align: center;
+        background-color: rgb(131,15,35);
+    
+    }
+
+    /*-----------------------------------start navbar---------------------*/
+
+    #navigation-container {
+        width: 100%;
+        margin: 0 auto;
+        height: 200px;
+    }
+      
+      .navigation-bar {
+        background-color: white;
+        height: 200px;
+        width: 100%;
+        text-align:center;
+    }
+    
+      .navigation-bar img{
+        position: relative;
+    }
+      .navigation-bar ul {
+        padding: 0px;
+        margin: 0px;
+        text-align: center;
+        display:inline-block;
+        vertical-align:top;
+    }
+      
+      .navigation-bar li {
+        list-style-type: none;
+        padding: 0px;
+        height: 24px;
+        margin-top: 4px;
+        margin-bottom: 4px;
+        display: inline-block;
+    }
+      
+      .navigation-bar li a {
+        color: black;
+        font-size: 16px;
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        line-height: 70px;
+        padding: 5px 15px;
+        opacity: 0.7;
+        display: block;
+    }
+    
+      .navigation-bar li a:hover{
+        background-color: rgb(131,15,35);
+        color: white;
+    }
+      
+      #menu {
+        float: right;
+    }
+    
+    /*--------------------------end navbar---------------------------*/
+
+
+    /*disable side navs for smaller divices as they are not appropriate for small screens*/ 
+    #arrow {
+        display: none;
+    }
+
+    #arrowright {
+        display: none;
+    }
+
+     /* footer re-alligned to fit smaller screen sizes*/
+    
+     #footer{
+        clear: both;
+        width: 100%;
+        height: 600px;
+        background-color: white;
+        overflow: hidden;
+        position:relative;
+}    
+
+    #footer1{
+        width: 100%;
+        top: 10%;
+        left: 30%
+    
+}
+
+
+    #footer2{
+        width: 100%;
+        top: 45%;
+        left: -2%;
+    
+}
+
+
+    #footer3{
+        width: 50%;
+        top: 80%;
+        left: 55%;
+    
+}
+
+    #footer4{
+        width: 50%;
+        top: 86.5%;
+        left: 6%;
+    
+}
+
+/* remove sticky fucntion from header on smaller screens sizes*/
+#header{
+    position: initial !important;
+}
+   
+}
