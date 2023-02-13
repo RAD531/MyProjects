@@ -7,3 +7,13 @@ C:\Users\ryand\source\repos\CoffeeGame\CoffeeGame\obj\Debug\CoffeeGame.csproj.Ge
 C:\Users\ryand\source\repos\CoffeeGame\CoffeeGame\obj\Debug\CoffeeGame.exe
 C:\Users\ryand\source\repos\CoffeeGame\CoffeeGame\obj\Debug\CoffeeGame.pdb
 C:\Users\ryand\source\repos\CoffeeGame\CoffeeGame\obj\Debug\CoffeeGame.Form1.resources
+C:\Users\ryand\OneDrive\Documents\GitHub\MyProjects\CoffeeGame\CoffeeGame\bin\Debug\CoffeeGame.exe.config
+C:\Users\ryand\OneDrive\Documents\GitHub\MyProjects\CoffeeGame\CoffeeGame\bin\Debug\CoffeeGame.exe
+C:\Users\ryand\OneDrive\Documents\GitHub\MyProjects\CoffeeGame\CoffeeGame\bin\Debug\CoffeeGame.pdb
+C:\Users\ryand\OneDrive\Documents\GitHub\MyProjects\CoffeeGame\CoffeeGame\obj\Debug\CoffeeGame.csproj.AssemblyReference.cache
+C:\Users\ryand\OneDrive\Documents\GitHub\MyProjects\CoffeeGame\CoffeeGame\obj\Debug\CoffeeGame.Form1.resources
+C:\Users\ryand\OneDrive\Documents\GitHub\MyProjects\CoffeeGame\CoffeeGame\obj\Debug\CoffeeGame.Properties.Resources.resources
+C:\Users\ryand\OneDrive\Documents\GitHub\MyProjects\CoffeeGame\CoffeeGame\obj\Debug\CoffeeGame.csproj.GenerateResource.cache
+C:\Users\ryand\OneDrive\Documents\GitHub\MyProjects\CoffeeGame\CoffeeGame\obj\Debug\CoffeeGame.csproj.CoreCompileInputs.cache
+C:\Users\ryand\OneDrive\Documents\GitHub\MyProjects\CoffeeGame\CoffeeGame\obj\Debug\CoffeeGame.exe
+C:\Users\ryand\OneDrive\Documents\GitHub\MyProjects\CoffeeGame\CoffeeGame\obj\Debug\CoffeeGame.pdb
